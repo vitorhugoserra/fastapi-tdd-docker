@@ -1,11 +1,11 @@
 [tool.poetry]
 name = "project"
 version = "0.1.0"
-description = "TDD project with fasapi and docker"
+description = ""
 authors = ["Vitor Hugo <vitorhugoserravalle@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.8"
+python = "3.10.1"
 fastapi = "0.70.1"
 uvicorn = "0.16.0"
 
