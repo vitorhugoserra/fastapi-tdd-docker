@@ -2,3 +2,5 @@ __pycache__
 env
 project/.venv
 project/.pytest_cache
+project/htmlcov
+.coverage
