@@ -4,6 +4,7 @@
 import json
 
 import pytest
+
 from app.api import summaries
 from app.models.tortoise import TextSummary
 
@@ -11,6 +12,7 @@ from app.models.tortoise import TextSummary
 def test_create_summary(test_app_with_db, monkeypatch):
     def mock_generate_summary(summary_id, url):
         return None
+
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
     response = test_app_with_db.post(
@@ -84,6 +86,7 @@ def test_read_summary_incorrect_id(test_app_with_db):
 def test_read_all_summaries(test_app_with_db, monkeypatch):
     def mock_generate_summary(summary_id, url):
         return None
+
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
     response = test_app_with_db.post(
@@ -101,6 +104,7 @@ def test_read_all_summaries(test_app_with_db, monkeypatch):
 def test_remove_summary(test_app_with_db, monkeypatch):
     def mock_generate_summary(summary_id, url):
         return None
+
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
     response = test_app_with_db.post(
@@ -135,6 +139,7 @@ def test_remove_summary_incorrect_id(test_app_with_db):
 def test_update_summary(test_app_with_db, monkeypatch):
     def mock_generate_summary(summary_id, url):
         return None
+
     monkeypatch.setattr(summaries, "generate_summary", mock_generate_summary)
 
     response = test_app_with_db.post(
